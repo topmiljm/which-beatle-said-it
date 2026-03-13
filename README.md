@@ -1,42 +1,107 @@
 # Which Beatle Said It? 🎸
 
-A trivia game where players guess which member of The Beatles said famous quotes.
+A full-stack trivia game where players guess which member of The Beatles said famous quotes.
+
+Built with **React**, **Node.js**, **Express**, and **SQLite**.
+
+---
 
 ## Features
-- User authentication (JWT)
-- High score tracking
-- Guest play mode
-- React frontend
-- Express + SQLite backend
 
-sqlite3 database.db < schema.sql
+* 🎵 Beatles quote trivia game
+* 👤 User registration and login (JWT authentication)
+* 🏆 Personal high score tracking
+* 🎲 Randomized quotes every game
+* 👥 Guest mode available
+* 💾 Scores saved to SQLite database
+* 🔐 Secure password hashing with bcrypt
+
+---
 
 ## Tech Stack
-Frontend:
-- React
 
-Backend:
-- Node.js
-- Express
-- SQLite
-- JWT Authentication
+Frontend
+
+* React
+* JavaScript
+* CSS
+
+Backend
+
+* Node.js
+* Express
+* SQLite
+
+Authentication
+
+* JSON Web Tokens (JWT)
+* bcrypt
+
+---
+
+## How It Works
+
+1. A user registers or logs in.
+2. The game loads 10 random Beatles quotes.
+3. The player guesses which Beatle said each quote.
+4. The score is calculated.
+5. If the score beats the user's previous best, a **new high score** is saved.
+
+Guest users can play the game but their scores are not stored.
+
+---
 
 ## Installation
 
-Clone the repo:
+Clone the repository:
 
-git clone https://github.com/yourname/which-beatle-said-it
+git clone https://github.com/topmiljm/which-beatle-said-it.git
 
-Install dependencies:
+Install backend dependencies:
 
-Backend:
+cd backend
 npm install
 
-Frontend:
+Install frontend dependencies:
+
+cd ../frontend
 npm install
 
-Run backend:
+---
+
+## Running the App
+
+Start the backend server:
+
+cd backend
 node server.js
 
-Run frontend:
+Start the React app:
+
+cd frontend
 npm start
+
+The frontend will run on:
+
+http://localhost:3000
+
+The backend runs on:
+
+http://localhost:5000
+
+---
+
+## Future Improvements
+
+* Global leaderboard
+* Difficulty levels
+* Timer mode
+* More quote categories
+* Deployment (Render / Vercel)
+
+---
+
+## Author
+
+James T
+Aspiring Software Developer
