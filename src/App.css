@@ -1,0 +1,548 @@
+/* =======================
+   Fonts
+======================= */
+@font-face {
+  font-family: 'Bootle';
+  src: url('./assets/fonts/Bootle-4B9l.ttf') format('truetype');
+}
+
+/* =======================
+   Global App
+======================= */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* centers horizontally */
+  justify-content: flex-start;
+  /* keeps content at top */
+  /* padding-top: 20px; */
+  font-family: Arial, sans-serif;
+}
+
+/* =======================
+   Welcome Page
+======================= */
+.welcome-screen {
+  background-color: white;
+  text-align: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: black;
+}
+
+/* Title wrapper - tighter spacing */
+.title-wrapper-welcome {
+  line-height: 1.2;
+  /* tighter spacing between layers */
+  margin-bottom: 30px;
+  margin-top: 20px;
+  background-color: lightgray;
+  /* subtle white overlay */
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  /* soft shadow for depth */
+}
+
+.beatles-title-welcome {
+  font-family: 'Bootle', sans-serif;
+  font-size: 4.5rem;
+  letter-spacing: 3px;
+  margin: 0;
+  color: black;
+
+  /* subtle layered shadow like retro posters */
+  text-shadow:
+    2px 2px 0 #fff,
+    4px 4px 0 rgba(0, 0, 0, 0.15),
+    0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Text blocks */
+.welcome-text,
+.end-quote {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.end-quote {
+  max-width: 500px;
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+
+/* Login link */
+.login-link {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link-2 {
+  font-size: 12px;
+  color: darkblue;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* =======================
+   Login Page
+======================= */
+
+/* Auth Page Layout */
+.auth-screen {
+  min-height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card */
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title */
+.auth-title {
+  font-family: 'Bootle', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.auth-input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: 0.2s ease;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button override width */
+.auth-button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.auth-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-error {
+  color: #d62828;
+  font-size: 0.85rem;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* =======================
+   Buttons
+======================= */
+.play-button,
+.play-again-button {
+  margin-top: 25px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  color: darkblue;
+  background: linear-gradient(135deg,
+      #ff5f6d,
+      #ffc371,
+      #42e695,
+      #3bb2b8,
+      #c471ed,
+      #f64f59);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.play-button:hover,
+.play-again-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.play-button:active,
+.play-again-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* =======================
+   Game Styles
+======================= */
+
+.welcome-user {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: black;
+  font-family: Bootle;
+}
+
+.guest-welcome {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+.high-score {
+  text-align: center;
+  font-size: 1rem;
+  color: darkblue;
+  margin-bottom: 10px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* letter-spacing: 1px; */
+}
+
+.gradient-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  background: linear-gradient(135deg,
+      #ff5f6d,
+      #ffc371,
+      #42e695,
+      #3bb2b8,
+      #c471ed,
+      #f64f59);
+  background-size: 400% 400%;
+  animation: psychedelicShift 15s ease infinite;
+}
+
+.game {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+  margin: 20px;
+}
+
+.quote {
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #fff8dc;
+  border-radius: 15px;
+  border: gray 0.1px solid;
+  box-shadow: 4px 4px 0 black;
+  font-style: italic;
+}
+
+.game button {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #ffcc00;
+  transition: all 0.2s ease;
+}
+
+.game button:hover {
+  background-color: #ffdb4d;
+  transform: scale(1.05);
+}
+
+.game button:active {
+  transform: scale(0.98);
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.progress {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: green;
+  font-weight: bold;
+}
+
+/* =======================
+   Result Screen / Vinyl
+======================= */
+.result-screen {
+  text-align: center;
+  padding: 40px;
+}
+
+.high-score-result {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #4d3e02;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.new-high-score {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: darkred;
+  margin-top: 5px;
+  font-family: Bootle;
+  letter-spacing: 2px;
+}
+
+.record {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 40px auto;
+  border-radius: 50%;
+  position: relative;
+  background: repeating-radial-gradient(circle at center,
+      #000 0px,
+      #000 2px,
+      #111 3px,
+      #000 4px);
+  animation: spin 4s linear infinite;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.record-label {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: #ffcc00;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Bootle', sans-serif;
+  font-size: 0.9rem;
+  line-height: 2.7;
+  padding: 10px;
+  color: #000;
+}
+
+.record::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #ddd;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* =======================
+   Beatle Main Title
+======================= */
+.beatles-title {
+  font-family: 'Bootle', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #fff;
+  text-shadow:
+    3px 3px 0 #000,
+    6px 6px 0 rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.title-wrapper {
+  padding: 20px 40px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  margin-bottom: 20px;
+  border: black 0.5px solid;
+  box-shadow: 4px 0 4px 0 rgba(0, 0, 0, 0.4);
+  /* box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4); */
+}
+
+/* =======================
+   Animations
+======================= */
+@keyframes psychedelicShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =======================
+   Mobile / Responsive
+======================= */
+@media (max-width: 768px) {
+
+  .welcome-screen,
+  .login-screen {
+    padding: 10px;
+  }
+
+  .beatles-title-welcome {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .title-wrapper-welcome {
+    padding: 10px 15px;
+  }
+
+  .welcome-text,
+  .end-quote {
+    font-size: 14px;
+    max-width: 90%;
+  }
+
+  .play-button,
+  .play-again-button {
+    width: 100%;
+  }
+
+  /* =======================
+     GAME SCREEN
+  ======================= */
+
+  .game {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .beatles-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .quote {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .game button {
+    width: 100%;
+  }
+
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .progress {
+    font-size: 14px;
+  }
+
+  /* =======================
+     RESULT SCREEN
+  ======================= */
+
+  .result-screen {
+    padding: 20px;
+  }
+
+  .record {
+    width: 150px;
+    height: 150px;
+  }
+
+  .record-label {
+    width: 80px;
+    height: 80px;
+    font-size: 0.7rem;
+  }
+
+  .high-score-result,
+  .new-high-score {
+    font-size: 1rem;
+  }
+
+  .logout-button {
+    position: static;
+    margin-bottom: 15px;
+  }
+}
