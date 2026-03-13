@@ -63,14 +63,10 @@ Clone the repository:
 
 git clone https://github.com/topmiljm/which-beatle-said-it.git
 
-Install backend dependencies:
-
-cd backend
+Install dependencies:
 npm install
 
-Install frontend dependencies:
-
-cd ../frontend
+cd backend
 npm install
 
 ---
