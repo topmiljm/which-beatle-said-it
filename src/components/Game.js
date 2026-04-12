@@ -34,7 +34,7 @@ const Game = () => {
       if (!token) return;
 
       try {
-        const res = await fetch("http://localhost:5000/highscore", {
+        const res = await fetch("https://which-beatle-api.onrender.com/highscore", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -52,7 +52,7 @@ const Game = () => {
       if (!showResult || !token) return;
 
       try {
-        const res = await fetch("http://localhost:5000/score", {
+        const res = await fetch("https://which-beatle-api.onrender.com/score", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
