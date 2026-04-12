@@ -5,7 +5,9 @@ const jwt = require("jsonwebtoken");
 const db = require("./db"); // your SQLite database connection
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://your-vercel-app.vercel.app"
+}));
 app.use(express.json());
 
 
