@@ -123,6 +123,11 @@ app.post("/score", authMiddleware, (req, res) => {
   );
 });
 
+
+app.get("/", (req, res) => {
+  res.send("Which Beatle API is running 🎶");
+});
+
 // Fetch current user high score
 app.get("/highscore", authMiddleware, (req, res) => {
   const userId = req.user.id;
