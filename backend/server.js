@@ -6,7 +6,10 @@ const db = require("./db"); // your SQLite database connection
 
 const app = express();
 app.use(cors({
-  origin: "https://which-beatle-said-it.vercel.app"
+  origin: [
+    "http://localhost:3000",
+    "https://which-beatle-said-it.vercel.app"
+  ]
 }));
 app.use(express.json());
 
