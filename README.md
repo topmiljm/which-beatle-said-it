@@ -1,8 +1,14 @@
 # Which Beatle Said It? 🎸
 
-A full-stack trivia game where players guess which member of The Beatles said famous quotes.
+A full-stack trivia game where players guess which member of The Beatles said iconic quotes.
 
 Built with **React**, **Node.js**, **Express**, and **SQLite**.
+
+---
+
+## 🌐 Deployment Note
+
+⚠️ The backend is hosted on Render (free tier). The first request may take a few seconds due to cold starts.
 
 ---
 
@@ -20,7 +26,8 @@ Built with **React**, **Node.js**, **Express**, and **SQLite**.
 
 ## Screenshot
 
-![Which Beatle Said It Game](screenshots/game-screenshot-2.png)
+![Game Screenshot 1](screenshots/game-screenshot-2.png)
+![Game Screenshot 2](screenshots/game-screenshot-1.png)
 
 ---
 
@@ -90,6 +97,16 @@ http://localhost:3000
 The backend runs on:
 
 http://localhost:5000
+
+---
+
+## 🌐 Deployment Notes
+
+The backend API is hosted on Render using the free tier.
+
+Because of this, the server may spin down during periods of inactivity. When this happens, the first request can take a few seconds to respond while the server restarts (cold start behavior).
+
+After the initial request, performance returns to normal.
 
 ---
 
