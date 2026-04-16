@@ -52,6 +52,15 @@ Authentication
 
 ---
 
+## 🌐 Deployment
+
+- Frontend: Vercel  
+  https://which-beatle-said-it.vercel.app/
+
+- Backend API: Render (free tier hosting)
+
+---
+
 ## How It Works
 
 1. A user registers or logs in.
