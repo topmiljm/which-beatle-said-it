@@ -24,7 +24,7 @@ Built with **React**, **Node.js**, **Express**, and **SQLite**.
 
 ---
 
-## Screenshot
+## Screenshots
 
 ![Game Screenshot 1](screenshots/game-screenshot-2.png)
 ![Game Screenshot 2](screenshots/game-screenshot-1.png)
