@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import quotesBank from "../data/quotesBank";
 import Result from "./Result";
 
@@ -9,6 +9,10 @@ const Game = () => {
   const [showResult, setShowResult] = useState(false);
   const [isNewHighScore, setIsNewHighScore] = useState(false);
   const [highScore, setHighScore] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(15);
+  const timerRef = useRef(null);
+  const TIMER_DURATION = 20; // seconds per question
+  const [timedOut, setTimedOut] = useState(false);
 
   const username = localStorage.getItem("username");
   const token = localStorage.getItem("token");
@@ -22,11 +26,44 @@ const Game = () => {
     return shuffled;
   };
 
+  const handleTimeout = useCallback(() => {
+    setTimedOut(true);
+  }, []);
+
+  const handleNext = () => {
+    setTimedOut(false);
+    const next = currentQuote + 1;
+    if (next >= quotations.length) setShowResult(true);
+    else setCurrentQuote(next);
+  };
+
+  const startTimer = useCallback(() => {
+    clearInterval(timerRef.current);
+    setTimeLeft(TIMER_DURATION);
+    timerRef.current = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timerRef.current);
+          handleTimeout();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+  }, [handleTimeout]);
+
   // Load quotes
   useEffect(() => {
     const shuffled = shuffleArray(quotesBank);
     setQuotations(shuffled.slice(0, 10));
   }, []);
+
+  useEffect(() => {
+    if (quotations.length > 0 && !showResult) {
+      startTimer();
+    }
+    return () => clearInterval(timerRef.current);
+  }, [currentQuote, quotations.length, showResult, startTimer]);
 
   // Fetch user's high score from backend
   useEffect(() => {
@@ -76,6 +113,8 @@ const Game = () => {
   }, [showResult, score, token]);
 
   const handleAnswer = (answer) => {
+    clearInterval(timerRef.current);
+    setTimedOut(false);
     const isCorrect = answer === quotations[currentQuote].answer;
     const nextScore = isCorrect ? score + 1 : score;
     const nextQuote = currentQuote + 1;
@@ -87,6 +126,8 @@ const Game = () => {
   };
 
   const playAgain = () => {
+    clearInterval(timerRef.current);
+    setTimedOut(false);
     const shuffled = shuffleArray(quotesBank);
     setQuotations(shuffled.slice(0, 10));
     setScore(0);
@@ -120,13 +161,30 @@ const Game = () => {
 
       <h2 className="quote">{q.quote}</h2>
 
-      <div className="options">
-        {q.options.map((option, index) => (
-          <button key={index} onClick={() => handleAnswer(option)}>
-            {option}
-          </button>
-        ))}
+      <div className="timer-bar-wrap">
+        <div
+          className="timer-bar"
+          style={{ width: `${(timeLeft / TIMER_DURATION) * 100}%` }}
+        />
+        <p className="timer-label">{timeLeft}s</p>
       </div>
+
+      {timedOut ? (
+        <div className="timeout-message">
+          <p>⏰ Time's up!</p>
+          <button onClick={handleNext}>
+            {currentQuote + 1 >= quotations.length ? "See Results" : "Next Quote →"}
+          </button>
+        </div>
+      ) : (
+        <div className="options">
+          {q.options.map((option, index) => (
+            <button key={index} onClick={() => handleAnswer(option)}>
+              {option}
+            </button>
+          ))}
+        </div>
+      )}
 
       <h4 className="progress">
         Quote: {currentQuote + 1} of {quotations.length}

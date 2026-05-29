@@ -236,7 +236,7 @@
   font-size: 1rem;
   color: darkblue;
   margin-bottom: 10px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   /* letter-spacing: 1px; */
 }
 
@@ -301,6 +301,7 @@
 .options {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .progress {
@@ -308,7 +309,40 @@
   color: #555;
   margin-bottom: 10px;
   text-align: center;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.timer-bar-wrap {
+  width: 100%;
+  background: #e0e0e0;
+  border-radius: 8px;
+  height: 10px;
+  margin: 12px 0 4px;
+  position: relative;
+}
+
+.timer-bar {
+  height: 100%;
+  background: #e04040;
+  border-radius: 8px;
+  transition: width 1s linear;
+}
+
+.timer-label {
+  font-size: 13px;
+  color: #888;
+  margin: 2px 0 0;
+  text-align: right;
+}
+
+.timeout-message {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.timeout-message p {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
 }
 
 .logout-button {
@@ -322,6 +356,7 @@
   cursor: pointer;
   color: green;
   font-weight: bold;
+  border: solid 1px black;
 }
 
 /* =======================
@@ -336,7 +371,7 @@
   font-size: 1.2rem;
   margin-top: 10px;
   color: #4d3e02;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .new-high-score {
@@ -505,12 +540,6 @@
 
   .game button {
     width: 100%;
-  }
-
-  .options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
   }
 
   .progress {
