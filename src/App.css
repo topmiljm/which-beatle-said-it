@@ -366,6 +366,10 @@
   border: solid 1px green;
 }
 
+.logout-button:hover {
+  transform: scale(1.01);
+}
+
 /* =======================
    Result Screen / Vinyl
 ======================= */
