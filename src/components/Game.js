@@ -166,7 +166,7 @@ const Game = () => {
           className="timer-bar"
           style={{ width: `${(timeLeft / TIMER_DURATION) * 100}%` }}
         />
-        <p className="timer-label">{timeLeft}s</p>
+        <p className="timer-label">{timeLeft}sec</p>
       </div>
 
       {timedOut ? (
