@@ -24,7 +24,7 @@ function WelcomeScreen() {
       {/* Welcome instructions */}
       <p className="welcome-text">
         Can you guess which member of the Fab Four said it? 
-        You will be shown 10 quotes and you will have to guess 
+        You will be shown 10 quotes and you will have 20 seconds to guess 
         which Beatle said the given quote. Test your Beatles knowledge and play now.
       </p>
 

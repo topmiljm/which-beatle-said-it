@@ -71,12 +71,6 @@ function Login() {
     }
   };
 
-  // const handleGuest = () => {
-  //   localStorage.removeItem("token");
-  //   localStorage.setItem("username", "Guest");
-  //   navigate("/game");
-  // };
-
   return (
     <div className="auth-screen">
       <div className="auth-card">
@@ -112,19 +106,16 @@ function Login() {
           Register & Play
         </button>
 
-        {/* <button className="logout-button" onClick={handleGuest}>
-          Play as Guest
-        </button> */}
         <button
-        className="logout-button"
-        onClick={() => {
-          localStorage.removeItem("username");
-          localStorage.removeItem("token");
-          window.location.href = "/";
-        }}
-      >
-        "Get Back" to Home Screen
-      </button>
+          className="logout-button"
+          onClick={() => {
+            localStorage.removeItem("username");
+            localStorage.removeItem("token");
+            window.location.href = "/";
+          }}
+        >
+          "Get Back" to Home Screen
+        </button>
       </div>
     </div>
   );
