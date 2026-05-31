@@ -294,13 +294,14 @@
   transition: all 0.2s ease;
 }
 
-.game button:hover {
+.game button:not(:disabled):hover {
   background-color: #ffdb4d;
   transform: scale(1.05);
 }
 
-.game button:active {
-  transform: scale(0.98);
+.game button:not(:disabled):active {
+  transform: scale(0.85);
+  border: 0.25px solid gray;
 }
 
 .options {

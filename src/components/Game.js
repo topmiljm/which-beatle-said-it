@@ -11,8 +11,10 @@ const Game = () => {
   const [highScore, setHighScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(15);
   const timerRef = useRef(null);
-  const TIMER_DURATION = 20; // seconds per question
+  const TIMER_DURATION = 20;
   const [timedOut, setTimedOut] = useState(false);
+  const [waiting, setWaiting] = useState(false);
+
 
   const username = localStorage.getItem("username");
   const token = localStorage.getItem("token");
@@ -115,14 +117,18 @@ const Game = () => {
   const handleAnswer = (answer) => {
     clearInterval(timerRef.current);
     setTimedOut(false);
+    setWaiting(true);
     const isCorrect = answer === quotations[currentQuote].answer;
     const nextScore = isCorrect ? score + 1 : score;
     const nextQuote = currentQuote + 1;
 
     setScore(nextScore);
 
-    if (nextQuote < quotations.length) setCurrentQuote(nextQuote);
-    else setShowResult(true);
+    setTimeout(() => {
+      setWaiting(false);
+      if (nextQuote < quotations.length) setCurrentQuote(nextQuote);
+      else setShowResult(true);
+    }, 2500);
   };
 
   const playAgain = () => {
@@ -179,7 +185,11 @@ const Game = () => {
       ) : (
         <div className="options">
           {q.options.map((option, index) => (
-            <button key={index} onClick={() => handleAnswer(option)}>
+            <button
+              key={index}
+              onClick={() => handleAnswer(option)}
+              disabled={waiting}
+            >
               {option}
             </button>
           ))}
