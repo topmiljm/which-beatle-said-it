@@ -16,7 +16,8 @@ const Game = () => {
   const TIMER_DURATION = 20;
   const [timedOut, setTimedOut] = useState(false);
   const [waiting, setWaiting] = useState(false);
-
+  const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
+  const logoutConfirmRef = useRef(null);
 
   const username = localStorage.getItem("username");
   const token = localStorage.getItem("token");
@@ -68,6 +69,21 @@ const Game = () => {
     }
     return () => clearInterval(timerRef.current);
   }, [currentQuote, quotations.length, showResult, startTimer]);
+
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (logoutConfirmRef.current && !logoutConfirmRef.current.contains(e.target)) {
+        setShowLogoutConfirm(false);
+      }
+    };
+
+    if (showLogoutConfirm) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [showLogoutConfirm]);
 
   // Fetch user's high score from backend
   useEffect(() => {
@@ -207,20 +223,37 @@ const Game = () => {
 
       {username !== "Guest" && (
         <p className="high-score">
-          High Score: <strong>{highScore}</strong>
+          High Score: <strong>{highScore}/10</strong>
         </p>
       )}
 
-      <button
-        className="logout-button"
-        onClick={() => {
-          localStorage.removeItem("username");
-          localStorage.removeItem("token");
-          window.location.href = "/";
-        }}
-      >
-        Logout/Go to Home Screen
-      </button>
+      {showLogoutConfirm ? (
+        <div className="logout-confirm" ref={logoutConfirmRef}>
+          <p>Are you sure you want to quit?</p>
+          <div className="logout-confirm-buttons">
+            <button
+              className="logout-confirm-button-1"
+              onClick={() => setShowLogoutConfirm(false)}>Play On</button>
+            <button
+              className="logout-confirm-button-2"
+              onClick={() => {
+                localStorage.removeItem("username");
+                localStorage.removeItem("token");
+                window.location.href = "/";
+              }}
+            >
+              Quit
+            </button>
+          </div>
+        </div>
+      ) : (
+        <button
+          className="logout-button"
+          onClick={() => setShowLogoutConfirm(true)}
+        >
+          Logout/Go to Home Screen
+        </button>
+      )}
     </div>
   );
 };

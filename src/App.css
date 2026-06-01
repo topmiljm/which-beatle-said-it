@@ -254,6 +254,7 @@
   color: black;
   text-decoration: none;
   font-weight: 500;
+  width: 50%;
 }
 
 .login-link-guest-2 {
@@ -401,6 +402,35 @@
 .logout-button:hover {
   transform: scale(1.01);
 }
+
+.logout-confirm {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1rem;
+  background-color: #fff8dc;
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  margin: 0 auto;
+  box-shadow: 4px 4px 0 gray;
+}
+
+.logout-confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+.logout-confirm-button-1 {
+  color: green;
+}
+
+.logout-confirm-button-2 {
+  color: #e04040;
+}
+
 
 /* =======================
    Result Screen / Vinyl
@@ -617,5 +647,9 @@
   .logout-button {
     position: static;
     margin: 15px 0 15px;
+  }
+
+  .logout-confirm {
+    width: 90%;
   }
 }
