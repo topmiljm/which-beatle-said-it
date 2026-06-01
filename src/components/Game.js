@@ -251,7 +251,7 @@ const Game = () => {
           className="logout-button"
           onClick={() => setShowLogoutConfirm(true)}
         >
-          Logout/Go to Home Screen
+          "Get Back" to Home Screen / Logout
         </button>
       )}
     </div>
