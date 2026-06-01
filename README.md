@@ -15,6 +15,7 @@ Built with **React**, **Node.js**, **Express**, and **SQLite**.
 ## Features
 
 * 🎵 Beatles quote trivia game
+* ⏱️ 20-second countdown timer per question
 * 👤 User registration and login (JWT authentication)
 * 🏆 Personal high score tracking
 * 🎲 Randomized quotes every game
@@ -65,9 +66,10 @@ Authentication
 
 1. A user registers or logs in.
 2. The game loads 10 random Beatles quotes.
-3. The player guesses which Beatle said each quote.
-4. The score is calculated.
-5. If the score beats the user's previous best, a **new high score** is saved.
+3. The player has 15 seconds to guess which Beatle said each quote.
+4. If the timer runs out, the quote is skipped with no point awarded.
+5. The score is calculated at the end.
+6. If the score beats the user's previous best, a **new high score** is saved.
 
 Guest users can play the game but their scores are not stored.
 
@@ -121,11 +123,9 @@ After the initial request, performance returns to normal.
 
 ## Future Improvements
 
+* More quotes including lyrics
 * Global leaderboard
 * Difficulty levels
-* Timer mode
-* More quote categories
-* Deployment (Render / Vercel)
 
 ---
 
