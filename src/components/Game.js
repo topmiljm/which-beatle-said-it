@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import quotesBank from "../data/quotesBank";
 import Result from "./Result";
+import { Link } from "react-router-dom";
+
 
 const Game = () => {
   const [quotations, setQuotations] = useState([]);
@@ -158,6 +160,9 @@ const Game = () => {
       ) : (
         <p className="guest-welcome">
           Playing as <strong>Guest</strong>
+          <Link to="/login" className="login-link-guest">
+            <strong>~Login</strong><span className="login-link-guest-2">(to save score)</span>
+          </Link>
         </p>
       )}
 

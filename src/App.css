@@ -42,6 +42,16 @@
   color: black;
 }
 
+.welcome-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
 /* Title wrapper - tighter spacing */
 .title-wrapper-welcome {
   line-height: 1.2;
@@ -130,7 +140,7 @@
   max-width: 400px;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 15px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -234,6 +244,27 @@
   font-size: 0.8rem;
   margin-bottom: 20px;
   color: gray;
+}
+
+.login-link-guest {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+  color: gray;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link-guest-2 {
+  font-size: 0.8rem;
+  color: gray;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link-guest:hover {
+  text-decoration: underline;
 }
 
 .high-score {
@@ -503,7 +534,8 @@
 
   .welcome-screen,
   .login-screen {
-    padding: 10px;
+    padding: 20px;
+    width: 95%;
   }
 
   .beatles-title-welcome {
