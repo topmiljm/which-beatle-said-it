@@ -99,26 +99,21 @@
   font-size: 1.1rem;
 }
 
-/* Login link */
 .login-link {
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 15px;
   font-size: 14px;
   color: black;
   text-decoration: none;
   font-weight: 500;
 }
 
+.login-link:hover {
+  text-decoration: underline;
+}
+
 .login-link-2 {
   font-size: 12px;
   color: darkblue;
-  text-decoration: none;
   font-weight: 500;
-}
-
-.login-link:hover {
-  text-decoration: underline;
 }
 
 /* =======================
@@ -214,6 +209,7 @@
       #c471ed,
       #f64f59);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* width: 90%; */
 }
 
 .play-button:hover,
@@ -247,11 +243,10 @@
 }
 
 .login-link-guest {
-  display: block;
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 0.8rem;
-  color: black;
+  color: darkblue;
   text-decoration: none;
   font-weight: 500;
   width: 50%;
@@ -260,7 +255,6 @@
 .login-link-guest-2 {
   font-size: 0.8rem;
   color: gray;
-  text-decoration: none;
   font-weight: 500;
 }
 

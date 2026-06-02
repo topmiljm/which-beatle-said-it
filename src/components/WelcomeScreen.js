@@ -29,9 +29,14 @@ function WelcomeScreen() {
         </p>
 
         {/* Optional login link */}
-        <Link to="/login" className="login-link">
-          <strong>Login</strong> <span className="login-link-2">(to save your score)</span>
-        </Link>
+        <div>
+          <Link
+            to="/login" className="login-link">
+            <strong>Login</strong>
+            <span className="login-link-2"> (to save your score)</span>
+          </Link>
+
+        </div>
 
         {/* Play button (navigates to game) */}
         <button

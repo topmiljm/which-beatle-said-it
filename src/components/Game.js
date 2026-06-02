@@ -176,9 +176,12 @@ const Game = () => {
       ) : (
         <p className="guest-welcome">
           Playing as <strong>Guest</strong>
-          <Link to="/login" className="login-link-guest">
-            <strong>~Login</strong><span className="login-link-guest-2">(to save score)</span>
-          </Link>
+          <div>
+            <Link to="/login" className="login-link-guest">
+              <strong>~Login</strong>
+            </Link>
+            <span className="login-link-guest-2"> (to save score)</span>
+          </div>
         </p>
       )}
 
