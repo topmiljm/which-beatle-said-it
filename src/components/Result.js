@@ -46,7 +46,7 @@ const Result = ({ score, total, onPlayAgain, highScore, isNewHighScore }) => {
                     window.location.href = "/";
                 }}
             >
-                Logout / "Get Back" to Home Screen
+                "Get Back" to Home Screen / Logout
             </button>
 
             <p className="end-quote">

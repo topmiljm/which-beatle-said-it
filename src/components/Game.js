@@ -11,9 +11,9 @@ const Game = () => {
   const [showResult, setShowResult] = useState(false);
   const [isNewHighScore, setIsNewHighScore] = useState(false);
   const [highScore, setHighScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(15);
+  const [timeLeft, setTimeLeft] = useState(30);
   const timerRef = useRef(null);
-  const TIMER_DURATION = 20;
+  const TIMER_DURATION = 30;
   const [timedOut, setTimedOut] = useState(false);
   const [waiting, setWaiting] = useState(false);
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
@@ -221,7 +221,7 @@ const Game = () => {
       )}
 
       <h4 className="progress">
-        Quote: {currentQuote + 1} of {quotations.length}
+        Round: {currentQuote + 1} of {quotations.length}
       </h4>
 
       {username !== "Guest" && (

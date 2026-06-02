@@ -122,18 +122,20 @@
 
 /* Auth Page Layout */
 .auth-screen {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background: white;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
+  padding: 50px 20px;
+  height: 500px;
 }
 
 /* Card */
 .auth-card {
   width: 100%;
   max-width: 400px;
-  padding: 40px;
+  padding: 30px 20px;
   border-radius: 20px;
   box-shadow: 10px 10px 15px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
