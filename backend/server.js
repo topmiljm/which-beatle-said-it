@@ -64,6 +64,10 @@ app.post("/register", async (req, res) => {
   }
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 // Login existing user
 app.post("/login", (req, res) => {
   const { username, password } = req.body;

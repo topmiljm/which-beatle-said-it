@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import '../App.css'; // make sure your CSS is imported
 
+
 function WelcomeScreen() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch("https://which-beatle-api.onrender.com/health").catch(() => { });
+  }, []);
 
   const handlePlayAsGuest = () => {
     localStorage.removeItem("token");       // no JWT for guests
