@@ -15,9 +15,9 @@ const Game = () => {
   const timerRef = useRef(null);
   const TIMER_DURATION = 30;
   const [timedOut, setTimedOut] = useState(false);
-  const [waiting, setWaiting] = useState(false);
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
   const logoutConfirmRef = useRef(null);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   const username = localStorage.getItem("username");
   const token = localStorage.getItem("token");
@@ -37,6 +37,7 @@ const Game = () => {
 
   const handleNext = () => {
     setTimedOut(false);
+    setSelectedAnswer(null);
     const next = currentQuote + 1;
     if (next >= quotations.length) setShowResult(true);
     else setCurrentQuote(next);
@@ -135,23 +136,17 @@ const Game = () => {
   const handleAnswer = (answer) => {
     clearInterval(timerRef.current);
     setTimedOut(false);
-    setWaiting(true);
+    setSelectedAnswer(answer);
+
     const isCorrect = answer === quotations[currentQuote].answer;
     const nextScore = isCorrect ? score + 1 : score;
-    const nextQuote = currentQuote + 1;
-
     setScore(nextScore);
-
-    setTimeout(() => {
-      setWaiting(false);
-      if (nextQuote < quotations.length) setCurrentQuote(nextQuote);
-      else setShowResult(true);
-    }, 2500);
   };
 
   const playAgain = () => {
     clearInterval(timerRef.current);
     setTimedOut(false);
+    setSelectedAnswer(null);
     const shuffled = shuffleArray(quotesBank);
     setQuotations(shuffled.slice(0, 10));
     setScore(0);
@@ -186,7 +181,21 @@ const Game = () => {
       )}
 
       <div className="title-wrapper">
-        <h1 className="beatles-title">Which Beatle Said It?</h1>
+        {selectedAnswer || timedOut ? (
+          <>
+            {!timedOut && (
+              <p className={selectedAnswer === quotations[currentQuote].answer ? "answer-correct" : "answer-incorrect"}>
+                {selectedAnswer === quotations[currentQuote].answer ? "✓ Correct:" : "✗ Incorrect:"}
+              </p>
+            )}
+            <p className="answer-explanation-2"><strong>{quotations[currentQuote].answer}</strong> {quotations[currentQuote].explanation}</p>
+            <button className="next-button" onClick={handleNext}>
+              {currentQuote + 1 >= quotations.length ? "Results >" : "Next >"}
+            </button>
+          </>
+        ) : (
+          <h1 className="beatles-title">Which Beatle Said It?</h1>
+        )}
       </div>
 
       <h2 className="quote">{q.quote}</h2>
@@ -202,9 +211,7 @@ const Game = () => {
       {timedOut ? (
         <div className="timeout-message">
           <p>⏰ Time's up!</p>
-          <button onClick={handleNext}>
-            {currentQuote + 1 >= quotations.length ? "See Results" : "Next Quote →"}
-          </button>
+
         </div>
       ) : (
         <div className="options">
@@ -212,7 +219,16 @@ const Game = () => {
             <button
               key={index}
               onClick={() => handleAnswer(option)}
-              disabled={waiting}
+              disabled={!!selectedAnswer}
+              style={{
+                color: selectedAnswer
+                  ? option === quotations[currentQuote].answer
+                    ? "green"
+                    : option === selectedAnswer
+                      ? "red"
+                      : undefined
+                  : undefined
+              }}
             >
               {option}
             </button>
