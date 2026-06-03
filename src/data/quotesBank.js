@@ -123,7 +123,7 @@ const quotesBank = [
         quote: "\"Being in The Beatles was a short, incredible period of my life. I had 22 years leading up to it, and it was all over eight years later.'\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "Ringo Starr",
-        explanation: "said this post-Beatles while refelecting on his time in the band.",
+        explanation: "said this post-Beatles while reflecting on his time in the band.",
     },
     {
         id: 19,
