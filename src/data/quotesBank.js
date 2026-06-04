@@ -88,7 +88,7 @@ const quotesBank = [
         quote: "\"I couldn't put my finger on one reason why we broke up. It was time, and we were spreading out. They were spreading out more than I was. I would've stayed with the band.\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "Ringo Starr",
-        explanation: "said this in a radio interview in 1977, during an appearance on 'Inner-view' with host Jim Pewter.",
+        explanation: "said this in a 1977 radio interview on 'Inner-view' with host Jim Pewter.",
     },
     {
         id: 14,
@@ -116,7 +116,7 @@ const quotesBank = [
         quote: "\"And the White Album is important to me for different reasons. One - I had left the band [temporarily] on the White Album.\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "Ringo Starr",
-        explanation: "said this in a radio interview on August 29, 1977, during an appearance on 'Inner-view' with host Jim Pewter.",
+        explanation: "said this in a 1977 radio interview on 'Inner-view' with host Jim Pewter.",
     },
     {
         id: 18,

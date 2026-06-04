@@ -535,11 +535,12 @@
   right: 16px;
   width: 3px;
   height: 100px;
-  background: linear-gradient(to bottom, blue, darkblue);
+  background: linear-gradient(to bottom, gray, black);
   transform-origin: top center;
   transform: rotate(35deg);
   border-radius: 2px;
   z-index: 9;
+  border: solid 1px #fff8dc;
 }
 
 .tonearm::after {
