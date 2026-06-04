@@ -19,12 +19,21 @@ function WelcomeScreen() {
   return (
     <div className="welcome-screen">
       < div className="welcome-card">
-        
-        <div className="title-wrapper-welcome-container">
-          <div className="title-wrapper-welcome">
-            <h1 className="beatles-title-welcome">Which</h1>
-            <h1 className="beatles-title-welcome">Beatle</h1>
-            <h1 className="beatles-title-welcome">Said It?</h1>
+
+        <div className="tv-container">
+          <div className="tv-screen-container">
+            <div className="tv-screen">
+              <h1 className="beatles-title-welcome">Which</h1>
+              <h1 className="beatles-title-welcome">Beatle</h1>
+              <h1 className="beatles-title-welcome">Said It?</h1>
+            </div>
+          </div>
+          <div className="tv-controls-container">
+            <div className="tv-button-1"></div>
+            <div className="tv-speaker">
+              <div className="tv-speaker-grills"></div>
+            </div>
+            <div className="tv-button-1"></div>
           </div>
         </div>
 
