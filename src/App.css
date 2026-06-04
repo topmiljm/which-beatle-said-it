@@ -79,7 +79,7 @@
 
 .beatles-title-welcome {
   font-family: 'Bootle', sans-serif;
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   letter-spacing: 3px;
   margin: 0;
   color: black;
@@ -535,9 +535,9 @@
   right: 16px;
   width: 3px;
   height: 100px;
-  background: linear-gradient(to bottom, #999, #666);
+  background: linear-gradient(to bottom, darkblue, blue);
   transform-origin: top center;
-  transform: rotate(20deg);
+  transform: rotate(35deg);
   border-radius: 2px;
   z-index: 9;
 }
@@ -564,7 +564,7 @@
 .speed-btn {
   width: 26px;
   height: 12px;
-  background: #111;
+  background: darkolivegreen;
   border-radius: 3px;
   border: 1px solid #333;
 }
@@ -702,7 +702,7 @@
   }
 
   .beatles-title-welcome {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     letter-spacing: 2px;
   }
 
@@ -731,7 +731,7 @@
   }
 
   .beatles-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 2px;
   }
 
