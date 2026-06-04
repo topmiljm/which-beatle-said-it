@@ -146,8 +146,7 @@
   text-shadow:
     2px 2px 0 #fff,
     4px 4px 0 rgba(0, 0, 0, 0.15),
-    0 0 10px rgba(0, 0, 0, 0.05);
-  /* box-shadow: inset ; */
+    -3px -3px 5px #6f6969;
 }
 
 .tv-controls-container {
@@ -523,7 +522,8 @@
 .answer-explanation-2 {
   font-size: 1.1rem;
   color: #fff8dc;
-  text-shadow: 1px 15px 25px black;
+  text-shadow: 1px 15px 25px black,
+  -2px -2px 10px #000;;
   text-align: center;
   margin: 0;
   line-height: 1.4;
@@ -769,7 +769,8 @@
   text-shadow:
     3px 3px 0 #000,
     6px 6px 0 rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(255, 255, 255, 0.4);
+    0 0 20px rgba(255, 255, 255, 0.4),
+    -4px -4px 10px #000;
 }
 
 .title-wrapper {
