@@ -52,6 +52,54 @@
   margin-top: 20px;
 }
 
+.tv-outer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.antenna-arms {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  margin-bottom: -4px;
+  position: relative;
+  width: 160px;
+}
+
+.antenna-arm {
+  position: absolute;
+  bottom: 0;
+  width: 3px;
+  height: 72px;
+  background: #888;
+  border-radius: 2px;
+}
+
+.antenna-arm.left {
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(-32deg);
+}
+
+.antenna-arm.right {
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(32deg);
+}
+
+.antenna-base {
+  width: 14px;
+  height: 14px;
+  background: #6b5a3e;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  margin-bottom: -2px;
+}
+
 .tv-container {
   text-align: center;
   font-size: 1rem;
@@ -59,14 +107,14 @@
   width: 80%;
   padding: 10px;
   border-radius: 20px;
-  margin: 35px auto 20px;
+  margin: auto 20px;
   box-shadow: 4px 4px 14px rgb(117, 38, 38);
 }
 
 .tv-screen-container {
   text-align: center;
   font-size: 1rem;
-  background-color: cornsilk;
+  background-color: lightgray;
   width: 90%;
   padding: 10px;
   border-radius: 20px;
@@ -774,7 +822,7 @@
   }
 
   .beatles-title-welcome {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     letter-spacing: 2px;
   }
 
