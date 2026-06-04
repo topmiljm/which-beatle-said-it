@@ -6,7 +6,7 @@ const Result = ({ score, total, onPlayAgain, highScore, isNewHighScore }) => {
     return (
         <div className="result-screen">
             <div className="title-wrapper">
-                <h1 className="beatles-title">Which Beatle Said It?</h1>
+                <h1 className="beatles-title">Which Beatle<br/> Said It?</h1>
             </div>
             <div className="results-container">
                 <div className="record-player">
