@@ -485,7 +485,7 @@
   text-align: center;
   font-size: 1rem;
   background-color: #fff8dc;
-  width: 65%;
+  width: 75%;
   padding: 10px;
   border-radius: 20px;
   border: 1px solid gray;
@@ -535,7 +535,7 @@
   right: 16px;
   width: 3px;
   height: 100px;
-  background: linear-gradient(to bottom, darkblue, blue);
+  background: linear-gradient(to bottom, blue, darkblue);
   transform-origin: top center;
   transform: rotate(35deg);
   border-radius: 2px;
