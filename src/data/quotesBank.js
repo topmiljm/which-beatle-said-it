@@ -39,7 +39,7 @@ const quotesBank = [
         quote: "\"I've got blisters on my fingers!\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "Ringo Starr",
-        explanation: "screamed this at the end of the recording of 'Helter Skelter' from the White Album released in 1968.",
+        explanation: "screamed this at the end of the recording of 'Helter Skelter' from the White Album released in 1968; an exclamation due to numerous takes and vigorous drumming.",
     },
     {
         id: 7,
