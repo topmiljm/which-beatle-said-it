@@ -267,6 +267,12 @@
   text-decoration: underline;
 }
 
+.login-link-1 {
+  font-size: 12px;
+  color: darkblue;
+  font-weight: 500;
+}
+
 .login-link-2 {
   font-size: 12px;
   color: darkblue;
@@ -881,7 +887,7 @@
 
   .play-button,
   .play-again-button {
-    width: 80%;
+    width: 85%;
   }
 
   /* =======================

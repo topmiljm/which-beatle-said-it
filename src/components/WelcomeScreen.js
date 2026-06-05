@@ -69,7 +69,7 @@ function WelcomeScreen() {
         >
           
           Play the Game
-          <span className="login-link-2"> (as guest)</span>
+          <span className="login-link-1"> (as guest)</span>
         </button>
 
         <p className="end-quote">
