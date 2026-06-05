@@ -6,7 +6,7 @@ const Result = ({ score, total, onPlayAgain, highScore, isNewHighScore }) => {
     return (
         <div className="result-screen">
             <div className="title-wrapper">
-                <h1 className="beatles-title">Which Beatle<br/> Said It?</h1>
+                <h1 className="beatles-title">Which Beatle<br /> Said It?</h1>
             </div>
             <div className="results-container">
                 <div className="record-player">
@@ -42,6 +42,18 @@ const Result = ({ score, total, onPlayAgain, highScore, isNewHighScore }) => {
                                 🎉 New High Score 🎶
                             </p>
                         )}
+                        {!isNewHighScore && score !== 0 && (
+                            <p className="getting-better">
+                                "...getting better all the time..."
+                            </p>
+                        )}
+                    </>
+                )}
+                {!token && (
+                    <>
+                        <p className="getting-better">
+                            "...getting better all the time..."
+                        </p>
                     </>
                 )}
             </div>

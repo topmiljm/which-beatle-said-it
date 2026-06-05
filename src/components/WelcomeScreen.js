@@ -42,6 +42,10 @@ function WelcomeScreen() {
               <div className="tv-button-1"></div>
             </div>
           </div>
+          <div className="tv-legs">
+            <div className="tv-leg-1"></div>
+            <div className="tv-leg-2"></div>
+          </div>
         </div>
 
         <p className="welcome-text">

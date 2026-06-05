@@ -57,7 +57,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .antenna-arms {
@@ -121,6 +121,7 @@
   margin: 5px auto 10px;
   box-shadow: inset -5px -2px 5px black,
     inset 5px 2px 5px black;
+  border: solid 1px cornsilk;
 }
 
 .tv-screen {
@@ -174,6 +175,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
   flex-shrink: 0;
+  border: solid 1px gray;
 }
 
 .tv-speaker {
@@ -195,7 +197,7 @@
   border-radius: 2px;
 }
 
-.tv-button-2 {
+/* .tv-button-2 {
   content: "";
   position: absolute;
   top: 14%;
@@ -205,6 +207,37 @@
   background: #888;
   border-radius: 2px;
   transform: translateX(-50%);
+  border: solid 2px red;
+} */
+
+.tv-legs {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 28px;
+  position: absolute;
+  bottom: 8px;
+}
+
+.tv-leg-1 {
+  width: 16px;
+  height: 26px;
+  background-color: rgb(117, 38, 38);
+  border-radius: 3px 3px 6px 6px;
+  box-shadow: 2px 2px 2px rgb(117, 38, 38);
+  transform: rotate(-28deg);
+  position: absolute;
+  left: 105px;
+}
+
+.tv-leg-2 {
+  width: 16px;
+  height: 26px;
+  background-color: rgb(117, 38, 38);
+  border-radius: 3px 3px 6px 6px;
+  box-shadow: 2px 2px 2px rgb(117, 38, 38);
+  transform: rotate(28deg);
+  position: absolute;
+  right: 105px;
 }
 
 /* Text blocks */
@@ -749,6 +782,15 @@
 
 .new-high-score {
   font-size: 1.1rem;
+  font-weight: bold;
+  color: darkred;
+  margin-top: 5px;
+  font-family: Bootle;
+  letter-spacing: 2px;
+}
+
+.getting-better {
+  font-size: 0.8rem;
   font-weight: bold;
   color: darkred;
   margin-top: 5px;
