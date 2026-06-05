@@ -67,7 +67,9 @@ function WelcomeScreen() {
           className="play-button"
           onClick={handlePlayAsGuest}
         >
+          
           Play the Game
+          <span className="login-link-2"> (as guest)</span>
         </button>
 
         <p className="end-quote">
