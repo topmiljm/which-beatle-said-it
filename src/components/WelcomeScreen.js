@@ -50,7 +50,7 @@ function WelcomeScreen() {
 
         <p className="welcome-text">
           Can you guess which member of the Fab Four said it?
-          You will be shown 10 quotes or lyrics and you will have 30 seconds to guess
+          You will be shown a total of 10 quotes or lyrics (1 per round) and you will have 30 seconds each round to guess
           which Beatle said the given quote or sang the given lyric. Test your Beatles knowledge and play now.
         </p>
 

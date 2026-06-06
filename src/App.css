@@ -216,7 +216,7 @@
   box-shadow: 2px 2px 2px rgb(117, 38, 38);
   transform: rotate(-28deg);
   position: absolute;
-  left: 145px;
+  left: 125px;
   border: solid 1px black;
 }
 
@@ -228,7 +228,7 @@
   box-shadow: 2px 2px 2px rgb(117, 38, 38);
   transform: rotate(28deg);
   position: absolute;
-  right: 145px;
+  right: 125px;
   border: solid 1px black;
 }
 
