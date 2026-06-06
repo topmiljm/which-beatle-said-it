@@ -233,19 +233,19 @@
 }
 
 /* Text blocks */
-.welcome-text,
-.end-quote {
+.welcome-text {
   max-width: 600px;
-  margin: 5px auto 30px;
+  margin: 25px auto 30px;
   font-size: 1.2rem;
   line-height: 1.5;
-  font-style: italic;
 }
 
 .end-quote {
-  max-width: 500px;
-  margin-top: 30px;
+  max-width: 600px;
+  margin: 15px auto 30px;
   font-size: 1.1rem;
+  line-height: 1.5;
+  font-style: italic;
 }
 
 .login-link {
@@ -425,7 +425,6 @@
   color: darkblue;
   margin-bottom: 10px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  /* letter-spacing: 1px; */
 }
 
 .gradient-bg {
