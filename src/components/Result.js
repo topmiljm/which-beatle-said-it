@@ -49,7 +49,7 @@ const Result = ({ score, total, onPlayAgain, highScore, isNewHighScore }) => {
                         )}
                         {score === 0 && (
                             <p className="getting-better">
-                                "...can't get much worse..."
+                                "...can't get no worse..."
                             </p>
                         )}
                     </>
