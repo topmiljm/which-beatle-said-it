@@ -47,13 +47,25 @@ const Result = ({ score, total, onPlayAgain, highScore, isNewHighScore }) => {
                                 "...getting better all the time..."
                             </p>
                         )}
+                        {score === 0 && (
+                            <p className="getting-better">
+                                "...can't get much worse..."
+                            </p>
+                        )}
                     </>
                 )}
                 {!token && (
                     <>
-                        <p className="getting-better">
-                            "...getting better all the time..."
-                        </p>
+                        {score === 0 && (
+                            <p className="getting-better">
+                                "...can't get much worse..."
+                            </p>
+                        )}
+                        {score !== 0 && (
+                            <p className="getting-better">
+                                "...getting better all the time..."
+                            </p>
+                        )}
                     </>
                 )}
             </div>
