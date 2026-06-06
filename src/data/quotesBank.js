@@ -67,14 +67,14 @@ const quotesBank = [
         quote: "\"I'm not afraid of death because I don't believe in it. It's just getting out of one car, and into another.\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "John Lennon",
-        explanation: "said this in a May 1969 interview accompanied by Yoko Ono in London.",
+        explanation: "said this in a circa 1969 interview accompanied by Yoko Ono in London; 11 years before his tragic murder in 1980.",
     },
     {
         id: 11,
-        quote: "\"When asked by a reporter about sleeping with long hair, this Beatle joked back: 'How do you sleep with your arms and legs still attached?'\"",
+        quote: "\"It's very nice indeed to get... [accepting an award]... well expecially one each because we usually have a bit of trouble cutting them in four.\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "George Harrison",
-        explanation: "said this during a 1964 Beatles press conference exchange.",
+        explanation: "said this at the 1964 Variety Club of Great Britain luncheon. They were each given an award for 'Show Business Personality of 1963.'",
     },
     {
         id: 12,
