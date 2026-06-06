@@ -123,7 +123,7 @@ const quotesBank = [
         quote: "\"Being in The Beatles was a short, incredible period of my life. I had twenty-two years leading up to it, and it was all over eight years later.'\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "Ringo Starr",
-        explanation: "said this post-Beatles breakup while reflecting on his time in the band; circa 1974.",
+        explanation: "said this circa 1974, post-Beatles breakup, while reflecting on his time in the band. In 1962, when he joined the band, he was 22 years old; the oldest member.",
     },
     {
         id: 19,
