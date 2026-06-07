@@ -71,10 +71,10 @@ const quotesBank = [
     },
     {
         id: 11,
-        quote: "\"It's very nice indeed to get... [accepting an award]... well expecially one each because we usually have a bit of trouble cutting them in four.\"",
+        quote: "\"It's very nice indeed to get... [accepting an award]... well especially one each because we usually have a bit of trouble cutting them in four.\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "George Harrison",
-        explanation: "said this at the 1964 Variety Club of Great Britain luncheon. They were each given an award for 'Show Business Personality of 1963.'",
+        explanation: "said this at the 1964 Variety Club of Great Britain luncheon. The Beatles were each given an award for 'Show Business Personality of 1963.'",
     },
     {
         id: 12,
