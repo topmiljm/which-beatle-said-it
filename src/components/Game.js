@@ -5,9 +5,17 @@ import { Link } from "react-router-dom";
 
 
 const Game = () => {
-  const [quotations, setQuotations] = useState([]);
-  const [currentQuote, setCurrentQuote] = useState(0);
-  const [score, setScore] = useState(0);
+  const [quotations, setQuotations] = useState(() => {
+    const saved = sessionStorage.getItem("quotations");
+    return saved ? JSON.parse(saved) : [];
+  });
+  const [currentQuote, setCurrentQuote] = useState(() => {
+    return parseInt(sessionStorage.getItem("currentQuote")) || 0;
+  });
+  const [score, setScore] = useState(() => {
+    return parseInt(sessionStorage.getItem("score")) || 0;
+  });
+
   const [showResult, setShowResult] = useState(false);
   const [isNewHighScore, setIsNewHighScore] = useState(false);
   const [highScore, setHighScore] = useState(0);
@@ -17,8 +25,9 @@ const Game = () => {
   const [timedOut, setTimedOut] = useState(false);
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
   const logoutConfirmRef = useRef(null);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-
+  const [selectedAnswer, setSelectedAnswer] = useState(() => {
+    return sessionStorage.getItem("selectedAnswer") || null;
+  });
   const username = localStorage.getItem("username");
   const token = localStorage.getItem("token");
 
@@ -60,9 +69,11 @@ const Game = () => {
 
   // Load quotes
   useEffect(() => {
-    const shuffled = shuffleArray(quotesBank);
-    setQuotations(shuffled.slice(0, 10));
-  }, []);
+    if (quotations.length === 0) {
+      const shuffled = shuffleArray(quotesBank);
+      setQuotations(shuffled.slice(0, 10));
+    }
+  }, [quotations.length]);
 
   useEffect(() => {
     if (quotations.length > 0 && !showResult) {
@@ -71,6 +82,28 @@ const Game = () => {
     return () => clearInterval(timerRef.current);
   }, [currentQuote, quotations.length, showResult, startTimer]);
 
+
+  useEffect(() => {
+    if (quotations.length > 0) {
+      sessionStorage.setItem("quotations", JSON.stringify(quotations));
+    }
+  }, [quotations]);
+
+  useEffect(() => {
+    sessionStorage.setItem("currentQuote", currentQuote);
+  }, [currentQuote]);
+
+  useEffect(() => {
+    sessionStorage.setItem("score", score);
+  }, [score]);
+
+  useEffect(() => {
+    if (selectedAnswer) {
+      sessionStorage.setItem("selectedAnswer", selectedAnswer);
+    } else {
+      sessionStorage.removeItem("selectedAnswer");
+    }
+  }, [selectedAnswer]);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -144,6 +177,10 @@ const Game = () => {
   };
 
   const playAgain = () => {
+    sessionStorage.removeItem("quotations");
+    sessionStorage.removeItem("currentQuote");
+    sessionStorage.removeItem("score");
+    sessionStorage.removeItem("selectedAnswer")
     clearInterval(timerRef.current);
     setTimedOut(false);
     setSelectedAnswer(null);
