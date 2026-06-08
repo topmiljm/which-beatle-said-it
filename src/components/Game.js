@@ -45,6 +45,7 @@ const Game = () => {
   }, []);
 
   const handleNext = () => {
+    sessionStorage.removeItem("questionStartTime");
     setTimedOut(false);
     setSelectedAnswer(null);
     const next = currentQuote + 1;
@@ -54,7 +55,25 @@ const Game = () => {
 
   const startTimer = useCallback(() => {
     clearInterval(timerRef.current);
-    setTimeLeft(TIMER_DURATION);
+
+    const savedStartTime = sessionStorage.getItem("questionStartTime");
+    const now = Date.now();
+
+    // Use saved start time if it exists for this question, otherwise set a new one
+    const startTime = savedStartTime ? parseInt(savedStartTime) : now;
+    if (!savedStartTime) {
+      sessionStorage.setItem("questionStartTime", startTime);
+    }
+
+    const elapsed = Math.floor((now - startTime) / 1000);
+    const remaining = Math.max(TIMER_DURATION - elapsed, 0);
+
+    if (remaining === 0) {
+      handleTimeout();
+      return;
+    }
+
+    setTimeLeft(remaining);
     timerRef.current = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
@@ -167,6 +186,7 @@ const Game = () => {
   }, [showResult, score, token]);
 
   const handleAnswer = (answer) => {
+    sessionStorage.removeItem("questionStartTime");
     clearInterval(timerRef.current);
     setTimedOut(false);
     setSelectedAnswer(answer);
@@ -177,6 +197,7 @@ const Game = () => {
   };
 
   const playAgain = () => {
+    sessionStorage.removeItem("questionStartTime");
     sessionStorage.removeItem("quotations");
     sessionStorage.removeItem("currentQuote");
     sessionStorage.removeItem("score");

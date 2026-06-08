@@ -88,7 +88,7 @@ const quotesBank = [
         quote: "\"I couldn't put my finger on one reason why we broke up. It was time, and we were spreading out. They were spreading out more than I was. I would've stayed with the band.\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "Ringo Starr",
-        explanation: "said this in a 1977 radio interview on 'Inner-view' with host Jim Pewter.",
+        explanation: "said this in a 1977 radio interview on 'Inner-view' with host Jim Pewter, discussing why the Beatles disbanded.",
     },
     {
         id: 14,
@@ -116,7 +116,7 @@ const quotesBank = [
         quote: "\"And the White Album is important to me for different reasons. One - I had left the band [temporarily] on the White Album.\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "Ringo Starr",
-        explanation: "said this in a 1977 radio interview on 'Inner-view' with host Jim Pewter.",
+        explanation: "said this in a 1977 radio interview on 'Inner-view' with host Jim Pewter. Ringo briefly left the Beatles after feeling frustrated with his playing abilities at the time and feeling distanced from the other members. He was warmly welcomed back during future White Album recording sessions.",
     },
     {
         id: 18,
