@@ -196,6 +196,17 @@ const Game = () => {
     setScore(nextScore);
   };
 
+  const handleQuit = () => {
+    sessionStorage.removeItem("questionStartTime");
+    sessionStorage.removeItem("quotations");
+    sessionStorage.removeItem("currentQuote");
+    sessionStorage.removeItem("score");
+    sessionStorage.removeItem("selectedAnswer");
+    localStorage.removeItem("username");
+    localStorage.removeItem("token");
+    window.location.href = "/";
+  };
+
   const playAgain = () => {
     sessionStorage.removeItem("questionStartTime");
     sessionStorage.removeItem("quotations");
@@ -313,11 +324,7 @@ const Game = () => {
               onClick={() => setShowLogoutConfirm(false)}>Play On</button>
             <button
               className="logout-confirm-button-2"
-              onClick={() => {
-                localStorage.removeItem("username");
-                localStorage.removeItem("token");
-                window.location.href = "/";
-              }}
+              onClick={handleQuit}
             >
               Quit
             </button>
