@@ -78,6 +78,11 @@ const Result = ({ score, total, onPlayAgain, highScore, isNewHighScore }) => {
                 onClick={() => {
                     localStorage.removeItem("username");
                     localStorage.removeItem("token");
+                    sessionStorage.removeItem("quotations");
+                    sessionStorage.removeItem("currentQuote");
+                    sessionStorage.removeItem("score");
+                    sessionStorage.removeItem("selectedAnswer");
+                    sessionStorage.removeItem("questionStartTime");
                     window.location.href = "/";
                 }}
             >
