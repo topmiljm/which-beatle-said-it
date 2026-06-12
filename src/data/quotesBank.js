@@ -279,7 +279,13 @@ const quotesBank = [
         answer: "George Harrison",
         explanation: "wrote and sang these lyrics to the song 'Within You and Without You' from the Sgt. Pepper's Lonely Hearts Club Band album released in 1967.",
     },
-
+    {
+        id: 41,
+        quote: "\"We went to do a job, and we'd worked all day and we happened to work all night. I came up still thinking it was day I suppose, and I said, 'It's been a hard day...' and I looked around and saw it was dark so I said, '... night!' So we came to 'A Hard Day's Night.'\"",
+        options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+        answer: "Ringo Starr",
+        explanation: "said this in an interview with disc jockey Dave Hull in 1964, describing how the title of the song, film, & movie 'A Hard Day's Night' came about.",
+    },
 ]
 
 export default quotesBank;
