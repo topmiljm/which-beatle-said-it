@@ -307,6 +307,35 @@ const quotesBank = [
         answer: "Paul McCartney",
         explanation: "said this in a 1964 hotel room interview when asked how he felt about the screaming fans down on the sidewalk outside his window.",
     },
+    {
+        id: 45,
+        quote: "\"🎶Although your mind's opaque, Try thinking more if just for your own sake, The future still looks good, And you've got time to rectify, All the things that you should🎶\"",
+        options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+        answer: "George Harrison",
+        explanation: "wrote and sang these lyrics to the song 'Think For Yourself' from the album Rubber Soul released in 1965.",
+    },
+    {
+        id: 46,
+        quote: "\"🎶I think I'm gonna be sad, I think it's today, yeah, The girl that's driving me mad, Is going away🎶\"",
+        options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+        answer: "John Lennon",
+        explanation: "wrote and sang these lyrics to the song 'Ticket To Ride' from the album Help! released in 1965. Credited as a Lennon-McCartney composition.",
+    },
+    {
+        id: 47,
+        quote: "\"🎶Found my coat and grabbed my hat, Made the bus in seconds flat, Found my way upstairs and had a smoke, And somebody spoke and I went into a dream🎶\"",
+        options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+        answer: "Paul McCartney",
+        explanation: "wrote and sang these lyrics to the song 'A Day In The Life' from Sgt. Pepper's Lonely Hearts Club Band album released in 1967. Credited as a Lennon-McCartney composition.",
+    },
+    {
+        id: 48,
+        quote: "\"🎶Tell me that you love me, baby, Let me understand, Tell me that you love me, baby, I wanna be your man🎶\"",
+        options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+        answer: "Ringo Starr",
+        explanation: "sang these lyrics to the song 'I Wanna Be Your Man' from the album With The Beatles released in 1963. Credited as a Lennon-McCartney composition, the song was originally recorded and released in 1963 by the Rolling Stones.",
+    },
 ]
+
 
 export default quotesBank;
