@@ -151,7 +151,7 @@ const quotesBank = [
         quote: "\"🎶Living is easy with eyes closed, Misunderstanding all you see, It's getting hard to be someone but it all works out, It doesn't matter much to me🎶\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "John Lennon",
-        explanation: "wrote and sang these lyrics to the song 'Strawberry Fields Forever' released in 1967. Initially released as a non-album single but is included on the album Magicial Mystery Tour. Credited as a Lennon-McCartney composition.",
+        explanation: "wrote and sang these lyrics to the song 'Strawberry Fields Forever' released in 1967. Initially released as a non-album single but is included on the album Magical Mystery Tour. Credited as a Lennon-McCartney composition.",
     },
     {
         id: 23,
@@ -200,7 +200,7 @@ const quotesBank = [
         quote: "\"🎶On the corner is a banker with a motorcar, And little children laugh at him behind his back, And the banker never wears a Mac in the pouring rain, Very strange🎶\"",
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "Paul McCartney",
-        explanation: "wrote and sang these lyrics to the song 'Penny Lane' released in 1967. Initially released as a non-album single but is included on the album Magicial Mystery Tour. Credited as a Lennon-McCartney composition.",
+        explanation: "wrote and sang these lyrics to the song 'Penny Lane' released in 1967. Initially released as a non-album single but is included on the album Magical Mystery Tour. Credited as a Lennon-McCartney composition.",
     },
     {
         id: 30,
@@ -285,6 +285,27 @@ const quotesBank = [
         options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
         answer: "Ringo Starr",
         explanation: "said this in an interview with disc jockey Dave Hull in 1964, describing how the title of the song, film, & movie 'A Hard Day's Night' came about.",
+    },
+    {
+        id: 42,
+        quote: "\"I think I'll be leaving the band now.\"",
+        options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+        answer: "George Harrison",
+        explanation: "said this during the Let It Be album recording sessions at Twickenham Studios in January 1969. As seen in the Get Back documentary, George quit the Beatles due to frustration and creative differences. He rejoined the band a few days later.",
+    },
+    {
+        id: 43,
+        quote: "\"When asked what advice Maharishi Mahesh Yogi had for the Beatles after the death of their manager Brian Epstein, this Beatle said: 'He told us not to get overwhelmed by grief and to whatever thoughts we have of Brian to keep them happy because any thoughts we have of him will travel to him, wherever he is'.\"",
+        options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+        answer: "John Lennon",
+        explanation: "said this in an August 1967 interview, shortly after Beatles manager Brian Epstein's death. The Beatles were on a retreat with meditation guru Maharishi Mahesh Yogi when they found out.",
+    },
+    {
+        id: 44,
+        quote: "\"It's a marvelous feeling... it's the same feeling as when you go out on stage and you get a great big scream. It doesn't matter that it's a scream; there's nothing deep behind a scream, you know. A scream is just the same as a roar at a football match.\"",
+        options: ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"],
+        answer: "Paul McCartney",
+        explanation: "said this in a 1964 hotel room interview when asked how he felt about the screaming fans down on the sidewalk outside his window.",
     },
 ]
 
