@@ -25,7 +25,7 @@ const Result = ({ score, total, onPlayAgain, highScore, isNewHighScore }) => {
                     </div>
                 </div>
 
-                <h2 style={{ color: "#4d3e02", fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" }}>Game Over!</h2>
+                <h2 style={{ color: "#4d3e02", fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" }}>Game Over</h2>
 
                 <p style={{ color: "#4d3e02", fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" }}>
                     You scored {score} out of {total}
@@ -71,7 +71,7 @@ const Result = ({ score, total, onPlayAgain, highScore, isNewHighScore }) => {
             </div>
 
             <button className="play-again-button" onClick={onPlayAgain}>
-                Play Again!
+                Play Again
             </button>
             <button
                 className="logout-button"
